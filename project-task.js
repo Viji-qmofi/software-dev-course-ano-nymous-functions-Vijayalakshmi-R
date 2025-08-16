@@ -41,6 +41,10 @@ const todos = [
   const newToDos = todos.filter((inComplete => inComplete.completed === false));
   console.log("Incomplete Tasks:\t", ...newToDos);
 
+  /* The output willbe Incomplete Tasks:	 { task: 'Wash the dishes', completed: false, priority: 3 } 
+  { task: 'Buy groceries', completed: false, priority: 2 }
+  { task: 'Walk the dog', completed: false, priority: 2 }*/
+
   /*
   🔹 Task 2: Sort Tasks by Priority
   
@@ -51,6 +55,11 @@ const todos = [
   */
   newToDos.sort((low,high) => low.priority-high.priority)
   console.log("\nSorted by Priority:\t", ...newToDos);
+ /*Sorted by Priority:	 { task: 'Buy groceries', completed: false, priority: 2 }
+  { task: 'Walk the dog', completed: false, priority: 2 }
+  { task: 'Wash the dishes', completed: false, priority: 3 }*/
+
+
   
   /*
   🔹 Task 3: Mark All Tasks as Completed
@@ -62,6 +71,10 @@ const todos = [
   */
   const mappedArray = todos.map((todo) => ({...todo,completed : true}));
   console.log("\nAll Tasks Completed:\t", ...mappedArray);
+  /*All Tasks Completed:	 { task: 'Wash the dishes', completed: true, priority: 3 }
+  { task: 'Write a blog post', completed: true, priority: 1 } { task: 'Buy groceries', completed: true, priority: 2 }
+  { task: 'Study JavaScript', completed: true, priority: 1 } { task: 'Walk the dog', completed: true, priority: 2 }*/
+
     
   /*
   🔹 Task 4: Combine Filters
@@ -73,10 +86,10 @@ const todos = [
   */
   const combinedTask = todos.filter((inComplete => inComplete.completed === false)).sort((low,high) => low.priority-high.priority);
   console.log("\nSorted Incomplete Tasks:\t", ...combinedTask);
+  /*Sorted Incomplete Tasks:	 { task: 'Buy groceries', completed: false, priority: 2 }
+   { task: 'Walk the dog', completed: false, priority: 2 }
+   { task: 'Wash the dishes', completed: false, priority: 3 }*/
   
-  // ============================================
-  // 🧪 Console Test Your Work
-  // ============================================
   
    
   
